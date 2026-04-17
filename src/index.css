@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", "Courier New", Courier, monospace;
+  
+  --color-brand: #10b981;
+  --color-brand-cyan: #00f2ff;
+  --color-brand-purple: #bc00ff;
+  --color-surface: #020617;
+  --color-text-dim: #94a3b8;
+  --color-border-subtle: rgba(255, 255, 255, 0.05);
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-slate-200 antialiased selection:bg-brand selection:text-black;
+  }
+}
+
+.atmosphere {
+  background: 
+    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(188, 0, 255, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(0, 242, 255, 0.03) 0%, transparent 60%);
+}
+
+.grid-overlay {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.bg-scanlines {
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 242, 255, 0.05) 50%);
+  background-size: 100% 4px;
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-2xl border border-white/5 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
+}
+
+.glass-pill {
+  @apply bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px white;
+  @apply text-transparent;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-linear-to-br from-white via-white to-white/40;
+}
+
+.glass-heavy {
+  @apply bg-slate-900/90 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)];
+}
+
+.title-massive {
+  @apply font-sans font-extrabold leading-[0.9] tracking-tighter uppercase;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
