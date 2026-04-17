@@ -109,13 +109,13 @@ export default function App() {
               </span>
             </div>
             
-            <h1 className="title-massive text-5xl md:text-7xl lg:text-[5.5vw] mb-8 leading-[1.05] tracking-tight text-white">
+            <h1 className="title-massive text-4xl sm:text-5xl md:text-7xl lg:text-[5.5vw] mb-6 sm:mb-8 leading-[1.05] tracking-tight text-white">
               Droits Immuables.<br/>
               <span className="text-brand">Sécurisons l’Avenir</span><br/>
               Foncier du Congo.
             </h1>
 
-            <p className="max-w-xl text-lg text-slate-400 font-normal leading-relaxed mb-12">
+            <p className="max-w-xl text-base sm:text-lg text-slate-400 font-normal leading-relaxed mb-8 sm:mb-12">
               FoncierChain ancre chaque titre foncier dans un registre blockchain inviolable — éliminant la fraude, mettant fin aux litiges et offrant à chaque citoyen congolais une preuve de propriété vérifiable et permanente.
             </p>
 
@@ -158,13 +158,13 @@ export default function App() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="relative flex items-center justify-center"
+            className="relative flex items-center justify-center w-full max-w-lg mx-auto lg:mx-0"
           >
             {/* Background Glow */}
             <div className="absolute inset-0 bg-brand/10 blur-[120px] rounded-full" />
             
             {/* Main Visual: Man + House */}
-            <div className="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+            <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
               {/* House Background */}
               <img 
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000" 
@@ -172,13 +172,13 @@ export default function App() {
                 className="absolute inset-0 w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-black/20" />
+              <div className="absolute inset-0 bg-black/40" />
               
               {/* The Man */}
               <img 
                 src="https://static.readdy.ai/image/5428fb06229ebdcbe5e003d42ee4bd28/3e5593e51f51cc95f3ee598205439591.png" 
                 alt="Propriétaire Heureux" 
-                className="relative w-full h-full object-cover object-top scale-110 translate-y-10 group-hover:scale-105 transition-all duration-1000 brightness-110"
+                className="relative w-full h-full object-cover object-top scale-110 translate-y-10 group-hover:scale-105 transition-all duration-1000 contrast-125 brightness-110"
                 referrerPolicy="no-referrer"
               />
               
@@ -189,56 +189,56 @@ export default function App() {
                 <div className="absolute w-[40%] h-[40%] border border-brand/30 border-dashed rounded-full" />
               </div>
 
-              <div className="absolute inset-0 bg-linear-to-t from-surface via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-linear-to-t from-surface via-transparent to-transparent opacity-90" />
             </div>
 
-            {/* Floating UI Elements (Exactly as per Photo) */}
+            {/* Floating UI Elements */}
             <motion.div 
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-4 -right-12 glass-heavy p-5 rounded-2xl flex items-center gap-4 border border-white/10 z-20 min-w-[240px]"
+              className="absolute -top-4 -right-4 sm:-right-12 glass-heavy p-3 sm:p-5 rounded-xl sm:rounded-2xl flex items-center gap-2 sm:gap-4 border border-white/10 z-20 min-w-[180px] sm:min-w-[240px]"
             >
-              <div className="w-12 h-12 bg-brand/20 rounded-full flex items-center justify-center border border-brand/30">
-                <CheckCircle2 className="w-6 h-6 text-brand" />
+              <div className="w-8 h-8 sm:w-12 sm:h-12 bg-brand/20 rounded-full flex items-center justify-center border border-brand/30">
+                <CheckCircle2 className="w-4 h-4 sm:w-6 sm:h-6 text-brand" />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-bold text-slate-400 tracking-[0.2em] mb-1">STATUS</span>
-                <span className="font-bold text-sm text-white">Verified by Blockchain</span>
+                <span className="text-[8px] sm:text-[10px] uppercase font-bold text-slate-400 tracking-[0.2em] mb-1">STATUS</span>
+                <span className="font-bold text-xs sm:text-sm text-white">Verified by Blockchain</span>
               </div>
             </motion.div>
 
             <motion.div 
               animate={{ x: [0, 8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute top-1/2 -left-20 glass-heavy p-6 rounded-2xl flex flex-col gap-4 min-w-[300px] z-20 border border-white/10"
+              className="absolute top-1/2 -left-4 sm:-left-20 glass-heavy p-4 sm:p-6 rounded-xl sm:rounded-2xl flex flex-col gap-3 sm:gap-4 min-w-[220px] sm:min-w-[300px] z-20 border border-white/10"
             >
               <div className="flex items-center justify-between">
-                <span className="text-[10px] uppercase font-bold text-slate-400 tracking-[0.2em]">ASSET ID</span>
-                <Lock className="w-4 h-4 text-slate-500" />
+                <span className="text-[8px] sm:text-[10px] uppercase font-bold text-slate-400 tracking-[0.2em]">ASSET ID</span>
+                <Lock className="w-3 h-3 sm:w-4 sm:h-4 text-slate-500" />
               </div>
-              <div className="bg-slate-900/80 p-4 rounded-xl border border-white/5">
-                <div className="font-mono text-[11px] font-bold text-brand leading-relaxed break-all">
+              <div className="bg-slate-900/80 p-3 sm:p-4 rounded-lg sm:rounded-xl border border-white/5">
+                <div className="font-mono text-[9px] sm:text-[11px] font-bold text-brand leading-relaxed break-all">
                   a3f9c12e545d98fa37bc90df6fbf8c6a6f3b0647dec980bc12b2e49c583c7d3c9
                 </div>
               </div>
-              <div className="text-[10px] text-slate-500 font-bold tracking-[0.2em] text-right uppercase">SHA-256 HASH</div>
+              <div className="text-[8px] sm:text-[10px] text-slate-500 font-bold tracking-[0.2em] text-right uppercase">SHA-256 HASH</div>
             </motion.div>
 
             <motion.div 
               animate={{ scale: [1, 1.03, 1] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -bottom-12 -right-16 glass-heavy p-3 rounded-2xl overflow-hidden min-w-[220px] z-20 shadow-2xl border border-white/10"
+              className="absolute -bottom-6 -right-4 sm:-bottom-12 sm:-right-16 glass-heavy p-2 sm:p-3 rounded-xl sm:rounded-2xl overflow-hidden min-w-[160px] sm:min-w-[220px] z-20 shadow-2xl border border-white/10"
             >
-              <div className="relative aspect-video rounded-xl overflow-hidden mb-3 bg-slate-900">
+              <div className="relative aspect-video rounded-lg sm:rounded-xl overflow-hidden mb-2 sm:mb-3 bg-slate-900">
                 <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_center,#10b981_0,transparent_70%)] animate-pulse" />
                 <div className="absolute inset-0 grid-overlay opacity-20" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center">
                    <div className="absolute inset-0 bg-brand/40 blur-lg rounded-full animate-ping" />
-                   <MapPin className="relative w-5 h-5 text-brand" />
+                   <MapPin className="relative w-4 h-4 sm:w-5 sm:h-5 text-brand" />
                 </div>
               </div>
-              <div className="px-3 pb-2 text-center">
-                <div className="text-[10px] font-extrabold text-white uppercase tracking-[0.2em] opacity-80">PARCEL [CC] VALIDATED</div>
+              <div className="px-2 sm:px-3 pb-1 sm:pb-2 text-center">
+                <div className="text-[8px] sm:text-[10px] font-extrabold text-white uppercase tracking-[0.2em] opacity-80">PARCEL [CC] VALIDATED</div>
               </div>
             </motion.div>
           </motion.div>
@@ -315,20 +315,20 @@ export default function App() {
       </section>
 
       {/* Comparison Section (Photo 6) */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-24 sm:py-32 relative overflow-hidden">
         <div className="container mx-auto px-6 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Old System */}
-            <div className="glass p-10 md:p-16 rounded-[3rem] border-red-500/10 relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-8">
-                 <div className="glass-pill text-[10px] font-bold text-red-500 uppercase tracking-widest bg-red-500/10 border-red-500/20">
+            <div className="glass p-8 sm:p-10 md:p-16 rounded-[2rem] sm:rounded-[3rem] border-red-500/10 relative overflow-hidden">
+              <div className="relative sm:absolute top-0 right-0 sm:p-8 mb-8 sm:mb-0">
+                 <div className="glass-pill text-[10px] font-bold text-red-500 uppercase tracking-widest bg-red-500/10 border-red-500/20 w-fit">
                    L'Ancien Système
                  </div>
               </div>
-              <div className="mb-12">
-                <h3 className="text-3xl font-extrabold mb-4 text-white">Registres Papier.<br/>Fraude Permanente.</h3>
+              <div className="mb-8 sm:mb-12">
+                <h3 className="text-2xl sm:text-3xl font-extrabold mb-4 text-white">Registres Papier.<br/>Fraude Permanente.</h3>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {[
                   "Documents facilement falsifiés ou détruits",
                   "Aucune autorité centrale de vérification",
@@ -336,8 +336,8 @@ export default function App() {
                   "Corruption à chaque niveau administratif",
                   "Familles expulsées après des décennies"
                 ].map((point, i) => (
-                  <div key={i} className="flex items-center gap-4 text-slate-500 font-medium">
-                    <XCircle className="w-5 h-5 text-red-500/50" />
+                  <div key={i} className="flex items-start sm:items-center gap-4 text-slate-500 text-sm sm:text-base font-medium">
+                    <XCircle className="w-5 h-5 text-red-500/50 shrink-0 mt-0.5 sm:mt-0" />
                     <span>{point}</span>
                   </div>
                 ))}
@@ -345,17 +345,17 @@ export default function App() {
             </div>
 
             {/* FoncierChain System */}
-            <div className="glass p-10 md:p-16 rounded-[3rem] border-brand/20 relative shadow-[0_0_100px_rgba(16,185,129,0.1)] overflow-hidden">
+            <div className="glass p-8 sm:p-10 md:p-16 rounded-[2rem] sm:rounded-[3rem] border-brand/20 relative shadow-[0_0_100px_rgba(16,185,129,0.1)] overflow-hidden">
               <div className="absolute inset-0 bg-brand/5 animate-pulse opacity-20 pointer-events-none" />
-              <div className="absolute top-0 right-0 p-8">
-                 <div className="glass-pill text-[10px] font-bold text-brand uppercase tracking-widest bg-brand/10 border-brand/20">
+              <div className="relative sm:absolute top-0 right-0 sm:p-8 mb-8 sm:mb-0">
+                 <div className="glass-pill text-[10px] font-bold text-brand uppercase tracking-widest bg-brand/10 border-brand/20 w-fit">
                    La Réponse FoncierChain
                  </div>
               </div>
-              <div className="mb-12">
-                <h3 className="text-3xl font-extrabold mb-4 text-white">Blockchain. Immuable.<br/>Pour Toujours.</h3>
+              <div className="mb-8 sm:mb-12">
+                <h3 className="text-2xl sm:text-3xl font-extrabold mb-4 text-white">Blockchain. Immuable.<br/>Pour Toujours.</h3>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {[
                   "Empreinte cryptographique SHA-256 de chaque titre",
                   "Registre distribué inviolable",
@@ -363,8 +363,8 @@ export default function App() {
                   "Contrôles d'accès de niveau ministériel",
                   "Zéro possibilité de double attribution"
                 ].map((point, i) => (
-                  <div key={i} className="flex items-center gap-4 text-slate-200 font-medium">
-                    <CheckCircle2 className="w-5 h-5 text-brand" />
+                  <div key={i} className="flex items-start sm:items-center gap-4 text-slate-200 text-sm sm:text-base font-medium">
+                    <CheckCircle2 className="w-5 h-5 text-brand shrink-0 mt-0.5 sm:mt-0" />
                     <span>{point}</span>
                   </div>
                 ))}
@@ -373,16 +373,16 @@ export default function App() {
               {/* Verified Badge Hover */}
               <motion.div 
                 whileHover={{ y: -5 }}
-                className="mt-12 glass p-6 rounded-2xl border-brand/30 bg-brand/5"
+                className="mt-10 sm:mt-12 glass p-4 sm:p-6 rounded-2xl border-brand/30 bg-brand/5"
               >
                 <div className="flex items-center justify-between mb-2">
-                   <span className="font-mono text-[10px] text-slate-500 font-bold uppercase tracking-widest">Fiche Parcelle</span>
-                   <span className="flex items-center gap-1 text-[10px] text-brand font-bold uppercase tracking-widest">
+                   <span className="font-mono text-[9px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-widest">Fiche Parcelle</span>
+                   <span className="flex items-center gap-1 text-[9px] sm:text-[10px] text-brand font-bold uppercase tracking-widest">
                      <div className="w-1.5 h-1.5 bg-brand rounded-full" /> Confirmé
                    </span>
                 </div>
-                <div className="text-lg font-bold mb-2 text-white">#Madibou-482</div>
-                <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">
+                <div className="text-base sm:text-lg font-bold mb-2 text-white">#Madibou-482</div>
+                <div className="text-[9px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-relaxed">
                   Propriétaire : Jean-Baptiste Moukala • Bloc #1 204 882
                 </div>
               </motion.div>
@@ -407,22 +407,22 @@ export default function App() {
           </div>
 
           <div className="max-w-4xl mx-auto mb-12">
-            <div className="relative group">
-              <div className="absolute inset-y-0 left-6 flex items-center">
+            <div className="relative group flex flex-col sm:block gap-4">
+              <div className="absolute inset-y-0 left-6 hidden sm:flex items-center">
                 <Search className="w-6 h-6 text-slate-500 group-focus-within:text-brand transition-colors" />
               </div>
               <input 
                 type="text" 
-                placeholder="Entrez un Numéro de Parcelle ou un Hash SHA-256..."
-                className="w-full bg-white/5 border border-white/10 rounded-2xl py-8 pl-16 pr-48 outline-none focus:border-brand/50 focus:bg-white/10 transition-all font-mono text-lg text-white"
+                placeholder="Numéro ou Hash..."
+                className="w-full bg-white/5 border border-white/10 rounded-2xl py-6 sm:py-8 pl-6 sm:pl-16 pr-6 sm:pr-48 outline-none focus:border-brand/50 focus:bg-white/10 transition-all font-mono text-sm sm:text-lg text-white"
               />
-              <div className="absolute inset-y-2 right-2 flex items-center">
-                <button className="h-full px-8 bg-brand text-white rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center gap-3 hover:bg-emerald-400 transition-colors">
-                  <Scan className="w-4 h-4" /> Interroger le Registre
+              <div className="sm:absolute inset-y-2 right-2 flex items-center">
+                <button className="w-full sm:h-full px-8 py-4 sm:py-0 bg-brand text-white rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-3 hover:bg-emerald-400 transition-colors">
+                  <Scan className="w-4 h-4" /> Interroger
                 </button>
               </div>
             </div>
-            <div className="mt-8 flex items-center justify-center gap-6 text-[11px] font-bold text-slate-500 uppercase tracking-widest">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-widest">
                <span>Essayez :</span>
                <button className="text-slate-300 hover:text-brand transition-colors underline cursor-pointer">#Madibou-482</button>
                <button className="text-slate-300 hover:text-brand transition-colors underline cursor-pointer">#Brazzaville-001</button>
@@ -433,58 +433,58 @@ export default function App() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="max-w-4xl mx-auto glass p-10 rounded-[2rem] text-left border-brand/20 bg-brand/5"
+            className="max-w-4xl mx-auto glass p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2rem] text-left border-brand/20 bg-brand/5"
           >
-             <div className="flex items-center gap-4 mb-10 pb-10 border-b border-white/5">
-               <div className="w-10 h-10 bg-brand/20 rounded-full flex items-center justify-center">
+             <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8 sm:mb-10 pb-8 sm:pb-10 border-b border-white/5">
+               <div className="w-10 h-10 bg-brand/20 rounded-full flex items-center justify-center shrink-0">
                  <ShieldCheck className="w-5 h-5 text-brand" />
                </div>
-               <div>
-                 <div className="text-xs font-bold text-brand uppercase tracking-widest mb-1">Résultat d'enquête — Recherche sur le registre en direct</div>
-                 <div className="text-xl font-extrabold text-white">#Madibou-482</div>
+               <div className="grow">
+                 <div className="text-[10px] font-bold text-brand uppercase tracking-widest mb-1">Résultat d'enquête — Registre en direct</div>
+                 <div className="text-lg sm:text-xl font-extrabold text-white">#Madibou-482</div>
                </div>
-               <div className="ml-auto glass-pill text-[10px] font-bold text-brand uppercase tracking-widest bg-brand/20 border-brand/30">
+               <div className="glass-pill text-[9px] sm:text-[10px] font-bold text-brand uppercase tracking-widest bg-brand/20 border-brand/30 w-fit">
                  Propriété Légitime Confirmée
                </div>
              </div>
 
-             <div className="grid md:grid-cols-2 gap-8 mb-10">
+             <div className="grid sm:grid-cols-2 gap-8 mb-8 sm:mb-10">
                <div className="space-y-6">
                  <div>
-                   <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-2 flex items-center gap-2">
-                     <Users className="w-3 h-3" /> Propriétaire Enregistré
+                   <div className="text-[9px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-1 sm:mb-2 flex items-center gap-2">
+                     <Users className="w-3 h-3" /> Propriétaire
                    </div>
-                   <div className="text-lg font-bold text-white">Jean-Baptiste Moukala</div>
+                   <div className="text-base sm:text-lg font-bold text-white">Jean-Baptiste Moukala</div>
                  </div>
                  <div>
-                   <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-2 flex items-center gap-2">
+                   <div className="text-[9px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-1 sm:mb-2 flex items-center gap-2">
                      <Database className="w-3 h-3" /> Numéro de Bloc
                    </div>
-                   <div className="text-lg font-bold font-mono text-white">#1 204 882</div>
+                   <div className="text-base sm:text-lg font-bold font-mono text-white">#1 204 882</div>
                  </div>
                </div>
                <div className="space-y-6">
                  <div>
-                   <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-2 flex items-center gap-2">
-                     <Building2 className="w-3 h-3" /> Notarié par
+                   <div className="text-[9px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-1 sm:mb-2 flex items-center gap-2">
+                     <Building2 className="w-3 h-3" /> Officiel
                    </div>
-                   <div className="text-lg font-bold text-slate-300">Ministère des Affaires Foncières du Congo</div>
+                   <div className="text-base sm:text-lg font-bold text-slate-300">Ministère des Affaires Foncières</div>
                  </div>
                  <div>
-                   <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-2 flex items-center gap-2">
+                   <div className="text-[9px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-1 sm:mb-2 flex items-center gap-2">
                      <RefreshCcw className="w-3 h-3" /> Horodatage
                    </div>
-                   <div className="text-lg font-bold font-mono text-white text-sm">03/11/2024 • 14:32:07 UTC</div>
+                   <div className="text-sm sm:text-lg font-bold font-mono text-white">03/11/2024 • 14:32:07 UTC</div>
                  </div>
                </div>
              </div>
 
-             <div className="p-6 bg-surface/80 rounded-xl border border-white/5 space-y-2">
-                <div className="flex items-center justify-between text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+             <div className="p-4 sm:p-6 bg-surface/80 rounded-xl border border-white/5 space-y-2">
+                <div className="flex items-center justify-between text-[9px] sm:text-[10px] font-bold text-slate-500 uppercase tracking-widest">
                   <span>Hash SHA-256</span>
                   <span className="text-brand">Signature Valide</span>
                 </div>
-                <div className="font-mono text-[11px] text-slate-400 break-all leading-relaxed">
+                <div className="font-mono text-[10px] sm:text-[11px] text-slate-400 break-all leading-relaxed">
                   a3f9c12e545d98fa37bc90df6fbf8c6a6f3b0647dec980bc12b2e49c583c7d3c9f281ce9f
                 </div>
              </div>
@@ -493,36 +493,36 @@ export default function App() {
       </section>
 
       {/* Ecosystem Section (Video 0:17) */}
-      <section id="ecosysteme" className="py-40 relative">
+      <section id="ecosysteme" className="py-24 sm:py-40 relative">
         <div className="container mx-auto px-6 lg:px-16">
-          <div className="max-w-4xl mx-auto text-center mb-24">
+          <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-24">
             <span className="font-mono text-brand text-[10px] sm:text-xs uppercase tracking-[0.2em] mb-4 block">
               L'ÉCOSYSTÈME
             </span>
-            <h2 className="title-massive text-4xl md:text-6xl mb-8 leading-tight text-white">
+            <h2 className="title-massive text-3xl sm:text-4xl md:text-6xl mb-8 leading-tight text-white">
               Une Plateforme. Trois Piliers.
             </h2>
-            <p className="max-w-2xl mx-auto text-lg text-slate-400 font-light leading-relaxed">
+            <p className="max-w-2xl mx-auto text-base sm:text-lg text-slate-400 font-light leading-relaxed">
               FoncierChain sert chaque partie prenante — des ministères gouvernementaux aux citoyens individuels — à travers un écosystème unifié et sécurisé.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Pillar 1 */}
             <motion.div 
               whileHover={{ y: -10 }}
-              className="glass p-10 rounded-[3rem] group"
+              className="glass p-8 sm:p-10 rounded-[2rem] sm:rounded-[3rem] group"
             >
               <div className="w-full aspect-square rounded-2xl bg-surface mb-8 relative overflow-hidden flex items-center justify-center border border-white/5">
                  <div className="absolute inset-0 bg-brand/5 group-hover:bg-brand/10 transition-colors" />
-                 <Fingerprint className="w-24 h-24 text-brand absolute z-10 opacity-30 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
+                 <Fingerprint className="w-16 sm:w-24 h-16 sm:h-24 text-brand absolute z-10 opacity-30 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
                  <div className="w-2/3 h-2/3 border border-brand/20 rounded-full group-hover:scale-125 transition-all duration-700" />
               </div>
-              <div className="glass-pill text-[10px] font-bold text-brand uppercase tracking-widest bg-brand/10 border-brand/20 mb-6 inline-block">
+              <div className="glass-pill text-[9px] sm:text-[10px] font-bold text-brand uppercase tracking-widest bg-brand/10 border-brand/20 mb-6 inline-block">
                 Pour les Agents Fonciers
               </div>
-              <h3 className="text-2xl font-extrabold mb-4 uppercase text-white tracking-tighter">Portail Institutionnel</h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-8 font-light">
+              <h3 className="text-xl sm:text-2xl font-extrabold mb-4 uppercase text-white tracking-tighter">Portail Institutionnel</h3>
+              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-8 font-light">
                 Accès sécurisé basé sur les rôles pour les agents fonciers, notaires et fonctionnaires ministériels. Enregistrez des parcelles, validez des transferts et auditez la chaîne de custody complète.
               </p>
               <button className="text-brand font-bold uppercase tracking-widest text-[10px] flex items-center gap-2 hover:gap-4 transition-all">
@@ -533,9 +533,9 @@ export default function App() {
             {/* Pillar 2 */}
             <motion.div 
               whileHover={{ y: -10 }}
-              className="glass p-10 rounded-[3rem] group bg-brand/5 border-brand/30"
+              className="glass p-8 sm:p-10 rounded-[2rem] sm:rounded-[3rem] group bg-brand/5 border-brand/30"
             >
-              <div className="w-full aspect-square rounded-2xl bg-surface mb-8 relative overflow-hidden flex items-center justify-center border border-brand/10">
+              <div className="w-full aspect-square rounded-2xl bg-surface mb-8 relative overflow-hidden flex items-center justify-center border border-white/10">
                  <div className="absolute inset-0 bg-brand/20" />
                  <div className="grid grid-cols-4 gap-4 p-8 w-full h-full relative z-10 opacity-40">
                     {[...Array(16)].map((_, i) => (
@@ -543,57 +543,57 @@ export default function App() {
                     ))}
                  </div>
                  <div className="absolute inset-0 flex items-center justify-center z-20">
-                    <ShieldCheck className="w-20 h-20 text-brand drop-shadow-[0_0_20px_rgba(16,185,129,0.5)]" />
+                    <ShieldCheck className="w-16 sm:w-20 h-16 sm:h-20 text-brand drop-shadow-[0_0_20px_rgba(16,185,129,0.5)]" />
                  </div>
               </div>
-              <div className="glass-pill text-[10px] font-bold text-brand uppercase tracking-widest bg-brand/10 border-brand/30 mb-6 inline-block">
+              <div className="glass-pill text-[9px] sm:text-[10px] font-bold text-brand uppercase tracking-widest bg-brand/10 border-brand/30 mb-6 inline-block">
                 Pour les Citoyens
               </div>
-              <h3 className="text-2xl font-extrabold mb-4 uppercase text-white tracking-tighter">Registre Public</h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-8 font-light">
+              <h3 className="text-xl sm:text-2xl font-extrabold mb-4 uppercase text-white tracking-tighter">Registre Public</h3>
+              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-8 font-light">
                 Ouvert. Transparent. Instantané. Chaque citoyen peut vérifier n'importe quel titre foncier en quelques secondes — sans bureaucratie, sans frais cachés et avec une certitude absolue.
               </p>
-              <div className="flex gap-4">
-                 <div className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] font-bold uppercase tracking-widest text-slate-500">Accès Libre</div>
-                 <div className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] font-bold uppercase tracking-widest text-slate-500">Temps Réel</div>
-                 <div className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] font-bold uppercase tracking-widest text-slate-500">Gratuit</div>
+              <div className="flex flex-wrap gap-3">
+                 <div className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[8px] sm:text-[9px] font-bold uppercase tracking-widest text-slate-500">Accès Libre</div>
+                 <div className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[8px] sm:text-[9px] font-bold uppercase tracking-widest text-slate-500">Temps Réel</div>
+                 <div className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[8px] sm:text-[9px] font-bold uppercase tracking-widest text-slate-500">Gratuit</div>
               </div>
             </motion.div>
 
             {/* Pillar 3 */}
             <motion.div 
               whileHover={{ y: -10 }}
-              className="glass p-10 rounded-[3rem] group"
+              className="glass p-8 sm:p-10 rounded-[2rem] sm:rounded-[3rem] group"
             >
               <div className="w-full aspect-square rounded-2xl bg-surface mb-8 relative overflow-hidden flex items-center justify-center border border-white/5">
                  <div className="absolute inset-0 bg-brand/5 group-hover:bg-brand/10 transition-colors" />
-                 <Smartphone className="w-32 h-32 text-brand opacity-10 absolute -bottom-10" />
-                 <div className="w-40 h-64 border-2 border-slate-800 rounded-[2rem] bg-slate-900 overflow-hidden relative shadow-2xl skew-y-6 group-hover:skew-y-0 transition-all duration-700">
+                 <Smartphone className="w-24 sm:w-32 h-24 sm:h-32 text-brand opacity-10 absolute -bottom-10" />
+                 <div className="w-32 sm:w-40 h-52 sm:h-64 border-2 border-slate-800 rounded-[1.5rem] sm:rounded-[2rem] bg-slate-900 overflow-hidden relative shadow-2xl skew-y-6 lg:group-hover:skew-y-0 transition-all duration-700">
                     <div className="w-full h-8 bg-slate-800 border-b border-white/5" />
                     <div className="p-4 space-y-3">
                        <div className="w-full h-2 bg-brand/20 rounded-full" />
                        <div className="w-2/3 h-2 bg-white/5 rounded-full" />
                        <div className="w-full aspect-square bg-slate-800 rounded-lg flex items-center justify-center">
-                          <Scan className="w-8 h-8 text-brand" />
+                          <Scan className="w-6 sm:w-8 h-6 sm:h-8 text-brand" />
                        </div>
                     </div>
                  </div>
               </div>
-              <div className="glass-pill text-[10px] font-bold text-brand uppercase tracking-widest bg-brand/10 border-brand/20 mb-6 inline-block">
+              <div className="glass-pill text-[9px] sm:text-[10px] font-bold text-brand uppercase tracking-widest bg-brand/10 border-brand/20 mb-6 inline-block">
                 Vérification Instantanée
               </div>
-              <h3 className="text-2xl font-extrabold mb-4 uppercase text-white tracking-tighter">Application Mobile</h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-8 font-light">
+              <h3 className="text-xl sm:text-2xl font-extrabold mb-4 uppercase text-white tracking-tighter">Application Mobile</h3>
+              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-8 font-light">
                 Vérifiez en 10 secondes. Scannez un QR code ou entrez un numéro de parcelle depuis n'importe où au Congo — même hors-ligne grâce au registre local sécurisé.
               </p>
-              <div className="flex gap-4">
-                 <button className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10 hover:bg-white/10 transition-all">
+              <div className="flex flex-col sm:flex-row gap-4">
+                 <button className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10 hover:bg-white/10 transition-all justify-center">
                     <div className="text-left">
                        <div className="text-[7px] uppercase tracking-widest text-slate-500 font-bold">Download on</div>
                        <div className="text-[10px] font-bold font-sans text-white">App Store</div>
                     </div>
                  </button>
-                 <button className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10 hover:bg-white/10 transition-all">
+                 <button className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10 hover:bg-white/10 transition-all justify-center">
                     <div className="text-left">
                        <div className="text-[7px] uppercase tracking-widest text-slate-500 font-bold">Get it on</div>
                        <div className="text-[10px] font-bold font-sans text-white text-nowrap">Google Play</div>
@@ -606,29 +606,29 @@ export default function App() {
       </section>
 
       {/* Call to Action (Video 0:21) */}
-      <section id="contact" className="py-40">
+      <section id="contact" className="py-24 sm:py-40">
         <div className="container mx-auto px-6 lg:px-16 text-center">
-           <div className="glass p-20 md:p-32 rounded-[4rem] relative overflow-hidden group">
+           <div className="glass p-10 sm:p-20 md:p-32 rounded-[2.5rem] sm:rounded-[4rem] relative overflow-hidden group">
               <div className="absolute inset-0 atmosphere opacity-20 group-hover:opacity-40 transition-opacity" />
               
               <span className="relative z-10 font-mono text-brand text-[10px] sm:text-xs uppercase tracking-[0.2em] mb-8 block">
                 SÉCURISEZ VOTRE HÉRITAGE
               </span>
-              <h2 className="relative z-10 title-massive text-4xl md:text-8xl mb-12 text-white">
-                Enregistrez Votre Terre.<br/>Protégez Votre Avenir.
+              <h2 className="relative z-10 title-massive text-3xl sm:text-5xl md:text-8xl mb-8 sm:mb-12 text-white">
+                Enregistrez Votre Terre.<br className="hidden sm:block" />Protégez Votre Avenir.
               </h2>
-              <p className="relative z-10 max-w-2xl mx-auto text-lg text-slate-400 mb-16 font-light">
+              <p className="relative z-10 max-w-2xl mx-auto text-base sm:text-lg text-slate-400 mb-10 sm:16 font-light">
                 Rejoignez plus de 180 000 propriétaires congolais qui ont déjà sécurisé leurs droits fonciers sur la blockchain. Cela prend moins de 5 minutes.
               </p>
 
-              <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-8">
-                 <button className="w-full sm:w-auto px-12 py-6 bg-brand text-white font-extrabold uppercase tracking-widest text-xs rounded-full hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] transition-all flex items-center justify-center gap-3 group/btn">
-                    <CheckCircle2 className="w-5 h-5" />
-                    Commencer l'Enregistrement
+              <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8">
+                 <button className="w-full sm:w-auto px-10 py-5 sm:px-12 sm:py-6 bg-brand text-white font-extrabold uppercase tracking-widest text-[10px] sm:text-xs rounded-full hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] transition-all flex items-center justify-center gap-3 group/btn">
+                    <CheckCircle2 className="w-5 h-5 font-bold" />
+                    Commencer
                  </button>
-                 <button className="w-full sm:w-auto px-12 py-6 border border-white/10 text-white font-extrabold uppercase tracking-widest text-xs rounded-full hover:bg-white/5 transition-all flex items-center justify-center gap-3">
-                    <Database className="w-5 h-5" />
-                    Télécharger le Livre Blanc
+                 <button className="w-full sm:w-auto px-10 py-5 sm:px-12 sm:py-6 border border-white/10 text-white font-extrabold uppercase tracking-widest text-[10px] sm:text-xs rounded-full hover:bg-white/5 transition-all flex items-center justify-center gap-3">
+                    <Database className="w-5 h-5 font-bold" />
+                    Livre Blanc
                  </button>
               </div>
            </div>
@@ -636,34 +636,34 @@ export default function App() {
       </section>
 
       {/* Partner Logos (Video 0:23) */}
-      <section id="partenaires" className="py-20 mb-20">
+      <section id="partenaires" className="py-20">
         <div className="container mx-auto px-6 lg:px-16">
-           <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500 text-center mb-16 opacity-50">
-             PARTENAIRES INSTITUTIONNELS & VALIDATEURS
+           <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500 text-center mb-12 sm:mb-16 opacity-50">
+             PARTENAIRES INSTITUTIONNELS
            </div>
-           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-30 grayscale brightness-200">
-              <div className="flex flex-col items-center gap-3 group">
-                 <Building2 className="w-12 h-12" />
+           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 sm:gap-12 items-center opacity-30 grayscale brightness-200">
+              <div className="flex flex-col items-center gap-2 sm:gap-3 group">
+                 <Building2 className="w-10 sm:w-12 h-10 sm:h-12" />
                  <span className="text-[8px] font-bold uppercase tracking-widest text-center">MinFoncier</span>
               </div>
-              <div className="flex flex-col items-center gap-3 group">
-                 <Globe className="w-12 h-12" />
+              <div className="flex flex-col items-center gap-2 sm:gap-3 group">
+                 <Globe className="w-10 sm:w-12 h-10 sm:h-12" />
                  <span className="text-[8px] font-bold uppercase tracking-widest text-center">AMP-Congo</span>
               </div>
-              <div className="flex flex-col items-center gap-3 group">
-                 <CheckCircle2 className="w-12 h-12" />
+              <div className="flex flex-col items-center gap-2 sm:gap-3 group">
+                 <CheckCircle2 className="w-10 sm:w-12 h-10 sm:h-12" />
                  <span className="text-[8px] font-bold uppercase tracking-widest text-center">BCC</span>
               </div>
-              <div className="flex flex-col items-center gap-3 group">
-                 <Users className="w-12 h-12" />
+              <div className="flex flex-col items-center gap-2 sm:gap-3 group">
+                 <Users className="w-10 sm:w-12 h-10 sm:h-12" />
                  <span className="text-[8px] font-bold uppercase tracking-widest text-center">UN-Habitat</span>
               </div>
-              <div className="flex flex-col items-center gap-3 group">
-                 <ShieldCheck className="w-12 h-12" />
+              <div className="flex flex-col items-center gap-2 sm:gap-3 group">
+                 <ShieldCheck className="w-10 sm:w-12 h-10 sm:h-12" />
                  <span className="text-[8px] font-bold uppercase tracking-widest text-center">BKD</span>
               </div>
-              <div className="flex flex-col items-center gap-3 group">
-                 <Fingerprint className="w-12 h-12" />
+              <div className="flex flex-col items-center gap-2 sm:gap-3 group">
+                 <Fingerprint className="w-10 sm:w-12 h-10 sm:h-12" />
                  <span className="text-[8px] font-bold uppercase tracking-widest text-center">WSC</span>
               </div>
            </div>
@@ -673,18 +673,18 @@ export default function App() {
       {/* Footer (Photo 3/Video) */}
       <footer className="py-20 bg-surface border-t border-white/5 relative z-10">
         <div className="container mx-auto px-6 lg:px-16 relative z-10">
-          <div className="grid lg:grid-cols-4 gap-16 mb-20 text-center md:text-left">
-            <div className="col-span-1 lg:col-span-1">
-              <div className="flex items-center gap-3 mb-8 justify-center md:justify-start">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16 mb-20 text-center sm:text-left">
+            <div className="col-span-1">
+              <div className="flex items-center gap-3 mb-8 justify-center sm:justify-start">
                 <div className="relative w-8 h-8 flex items-center justify-center">
                   <div className="absolute inset-0 border-2 border-brand rotate-45 rounded-sm" />
                 </div>
                 <span className="font-sans font-extrabold text-xl text-white">Foncier<span className="text-brand">Chain</span></span>
               </div>
-              <p className="text-slate-500 text-sm font-medium leading-relaxed mb-8">
+              <p className="text-slate-500 text-sm font-medium leading-relaxed mb-8 max-w-sm mx-auto sm:mx-0">
                 Sécuriser l'avenir foncier du Congo grâce à la technologie blockchain immuable. Chaque titre. Chaque citoyen. Pour toujours.
               </p>
-              <div className="flex items-center gap-3 p-3 bg-brand/10 border border-brand/20 rounded-xl justify-center md:justify-start">
+              <div className="flex items-center gap-3 p-3 bg-brand/10 border border-brand/20 rounded-xl justify-center sm:justify-start w-fit mx-auto sm:mx-0">
                  <div className="w-2 h-2 bg-brand rounded-full animate-pulse" />
                  <span className="text-[10px] font-bold text-brand uppercase tracking-widest text-nowrap">Réseau Principal Opérationnel</span>
               </div>
@@ -697,7 +697,6 @@ export default function App() {
                 <li><a href="#" className="hover:text-brand transition-all">Registre Public</a></li>
                 <li><a href="#" className="hover:text-brand transition-all">Moteur de Vérification</a></li>
                 <li><a href="#" className="hover:text-brand transition-all">Application Mobile</a></li>
-                <li><a href="#" className="hover:text-brand transition-all">Documentation API</a></li>
               </ul>
             </div>
 
@@ -705,21 +704,20 @@ export default function App() {
               <h4 className="font-mono text-[10px] font-bold uppercase tracking-widest text-slate-300 mb-8 underline decoration-brand underline-offset-8">Ressources</h4>
               <ul className="space-y-4 text-slate-500 text-sm font-medium">
                 <li><a href="#" className="hover:text-brand transition-all">Livre Blanc</a></li>
-                <li><a href="#" className="hover:text-brand transition-all">Documentation Technique</a></li>
-                <li><a href="#" className="hover:text-brand transition-all">Politique de Confidentialité</a></li>
-                <li><a href="#" className="hover:text-brand transition-all">Conditions d'Utilisation</a></li>
-                <li><a href="#" className="hover:text-brand transition-all">Open Source</a></li>
+                <li><a href="#" className="hover:text-brand transition-all">Documentation</a></li>
+                <li><a href="#" className="hover:text-brand transition-all">Confidentialité</a></li>
+                <li><a href="#" className="hover:text-brand transition-all">CGU</a></li>
               </ul>
             </div>
 
             <div className="col-span-1">
-              <h4 className="font-mono text-[10px] font-bold uppercase tracking-widest text-slate-300 mb-8 underline decoration-brand underline-offset-8 text-nowrap">Restez Informé</h4>
-              <p className="text-slate-500 text-sm mb-6">Recevez les mises à jour de la plateforme et les nouvelles fonctionnalités.</p>
-              <form className="relative mb-8">
+              <h4 className="font-mono text-[10px] font-bold uppercase tracking-widest text-slate-300 mb-8 underline decoration-brand underline-offset-8">Restez Informé</h4>
+              <p className="text-slate-500 text-sm mb-6 max-w-xs mx-auto sm:mx-0">Recevez les mises à jour de la plateforme.</p>
+              <form className="relative max-w-xs mx-auto sm:mx-0">
                 <input 
                   type="email" 
                   placeholder="votre@email.com" 
-                  className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-6 outline-none focus:border-brand/50 transition-all font-mono text-xs text-white"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-6 pr-14 outline-none focus:border-brand/50 transition-all font-mono text-xs text-white"
                 />
                 <button className="absolute right-2 top-2 h-8 w-8 bg-brand rounded-lg flex items-center justify-center hover:bg-emerald-400 transition-colors">
                   <ArrowUpRight className="w-4 h-4 text-white" />
@@ -728,11 +726,11 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between pt-12 border-t border-white/5 gap-8">
-            <div className="font-mono text-[10px] font-bold uppercase tracking-widest text-slate-500">
+          <div className="flex flex-col md:flex-row items-center justify-between pt-12 border-t border-white/5 gap-8 text-center md:text-left">
+            <div className="font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-500">
                © 2026 FoncierChain. République du Congo. Tous droits réservés.
             </div>
-            <div className="flex gap-12 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+            <div className="flex gap-8 sm:gap-12 text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-500">
                DAROLLO TECHNOLOGIES
             </div>
           </div>
